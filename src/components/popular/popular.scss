@@ -1,0 +1,328 @@
+@import '../../styling.scss';
+
+.popular{
+    position: relative;
+    margin: auto 10%;
+
+    span{
+        color: $second_blue;
+    }
+
+    .mainPopular{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+        gap: 10px;
+        box-shadow: 0px 5px 20px $box_shadow_black;
+        border-radius: 20px;
+        padding: 20px;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        
+
+        &:hover{
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .mainPopularDetails{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 40%;
+            
+            h2{
+                color: $main_blue;
+            }
+
+            .mainPopularDetailsBottom{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 80%;
+
+                .DetailsBottomLeft{
+                    .popularArticleAuthor{
+                        color: $main_blue;
+                    }
+
+                    .popularArticleDateTime{
+                        color: rgba(31, 63, 104, 0.5);
+                    }
+                }
+
+                .DetailsBottomRight{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 30px;
+
+                    .bookmark{
+                        cursor: pointer;
+                        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                        width: 30px;
+                
+                        &:hover{
+                            transform: scale(1.3);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainPopularImage{
+            flex: 60%;
+            max-width: 900px;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            cursor: pointer;
+
+        }
+    }
+
+    .popularCarousel{
+        .popularCarouselParent{
+            margin: 50px auto;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            width: 100%;
+            flex-wrap: wrap;
+        
+            .popularCarouselComponent{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                max-width: calc(33.33% - 20px);
+                flex: 1;
+                box-shadow: 0px 5px 20px $box_shadow_black;
+                border-radius: 20px;
+                padding: 20px;
+                transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                flex-basis: 25%;
+
+                &:hover{
+                    transform: scale(1.05);
+                    transition: 0.3s;
+                }
+
+                    .mainPopularCarouselImageParent{
+                        height: 300px;
+
+                        .mainPopularCarouselImage{
+                            max-height: 300px;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 20px;
+                            cursor: pointer;
+                        }
+                    }
+        
+                .carouselComponentDetails{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+        
+                    h3{
+                        color: $main_blue;
+                    }
+        
+                    .DetailsBottom{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+        
+                        .DetailsBottomRight{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 30px;
+
+                            .bookmark{
+                                cursor: pointer;
+                                transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                                width: 30px;
+      
+                                &:hover{
+                                    transform: scale(1.3);
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
+        
+                    .DetailsBottomLeft{
+                        .popularArticleAuthor{
+                            color: $main_blue;
+                        }
+        
+                        .popularArticleDateTime{
+                            color: rgba(31, 63, 104, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+        
+        .spanLeftBox{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 30px auto;
+            
+            
+            .spanLeft{
+                color: $main_blue;
+                width: auto;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 0.3s;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .imageModalOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+
+        .closeButton {
+            position: absolute;
+            top: 200px;
+            right: 110px;
+            z-index: 1002;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+      }
+      
+      .imageModal {
+        width: 90%;
+        height: 60%;
+        background: white;
+        z-index: 1001;
+        display: flex;
+        flex-direction: row;
+        border-radius: 20px;
+      
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .carouselComponentDetails{
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+
+            h3{
+                color: $main_blue;
+            }
+
+            .DetailsBottom{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+
+                .DetailsBottomRight{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 30px;
+
+                    img{
+                        height: auto;
+                    }
+
+                    .bookmark{
+                        cursor: pointer;
+                        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                        width: 30px;
+                
+                        &:hover{
+                            transform: scale(1.3);
+                            transition: 0.3s;
+                        }
+                      }
+                }
+            }
+
+            .DetailsBottomLeft{
+                .popularArticleAuthor{
+                    color: $main_blue;
+                }
+
+                .popularArticleDateTime{
+                    color: rgba(31, 63, 104, 0.5);
+                }
+            }
+        }
+      }
+    
+      .prevButton,
+      .nextButton {
+        position: absolute;
+        top: 10px;
+        transform: translateY(-50%);
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1002;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+      }
+    
+      .prevButton {
+        left: 40px;
+        
+      }
+    
+      .nextButton {
+        right: 40px;  
+      }
+
+      .bookmark{
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        width: 30px;
+
+        &:hover{
+            transform: scale(1.3);
+            transition: 0.3s;
+        }
+    }
+}
