@@ -22,3 +22,19 @@
         }
     }
 }
+
+@media screen and (max-width: $big_laptop) {
+    .header{
+        .headerContent{
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .header{
+        .headerContent{
+            height: 400px;
+        }
+    }
+}

@@ -326,3 +326,264 @@
         }
     }
 }
+
+@media screen and (max-width: $big_laptop) {
+    .popular{
+    
+        .mainPopular{
+    
+            .mainPopularImage{
+                max-width: 500px;
+                max-height: 400px;
+            }
+        }
+    
+        .popularCarousel{
+            .popularCarouselParent{
+            
+                .popularCarouselComponent{
+    
+                        .mainPopularCarouselImageParent{
+                            height: 200px;
+    
+                            .mainPopularCarouselImage{
+                                max-height: 200px;
+                            }
+                        }
+            
+                    .carouselComponentDetails{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+            
+            
+                        .DetailsBottom{
+            
+                            .DetailsBottomRight{
+                                gap: 20px;
+                            }
+                        }
+            
+                    }
+                }
+            }
+        }
+    
+        .imageModalOverlay {
+    
+            .closeButton {
+                top: 250px;
+                right: 160px;
+              }
+          }
+          
+          .imageModal {
+            width: 80%;
+            height: 50%;
+    
+            .carouselComponentDetails{
+    
+                .DetailsBottom{
+    
+                    .DetailsBottomRight{
+                        gap: 20px;
+                    }
+                }
+            }
+          }
+        
+          .prevButton {
+            left: 80px;
+            
+          }
+        
+          .nextButton {
+            right: 80px;  
+          }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .popular{
+    
+        .mainPopular{
+    
+            .mainPopularImage{
+                max-width: 400px;
+                max-height: 300px;
+            }
+        }
+    
+        .popularCarousel{
+            .popularCarouselParent{
+            
+                .popularCarouselComponent{
+                    gap: 10px;
+    
+                        .mainPopularCarouselImageParent{
+                            height: 150px;
+    
+                            .mainPopularCarouselImage{
+                                max-height: 150px;
+                            }
+                        }
+            
+                    .carouselComponentDetails{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+            
+            
+                        .DetailsBottom{
+            
+                            .DetailsBottomRight{
+                                gap: 20px;
+                            }
+                        }
+            
+                    }
+                }
+            }
+        }
+    
+        .imageModalOverlay {
+    
+            .closeButton {
+                top: 300px;
+                right: 110px;
+              }
+          }
+          
+          .imageModal {
+            width: 80%;
+            height: 30%;
+
+            img{
+                height: 100%;
+                
+            }
+    
+            .carouselComponentDetails{
+    
+                .DetailsBottom{
+    
+                    .DetailsBottomRight{
+                        gap: 20px;
+                    }
+                }
+            }
+          }
+        
+          .prevButton {
+            left: 50px;
+            
+          }
+        
+          .nextButton {
+            right: 50px;  
+          }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .popular{
+    
+        .mainPopular{
+            flex-direction: column-reverse;
+
+            .mainPopularDetails{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+
+                .mainPopularDetailsBottom{
+                    width: 100%;
+                }
+            }
+    
+            .mainPopularImage{
+                max-width: 100%;
+                max-height: auto;
+            }
+        }
+    
+        .popularCarousel{
+            .popularCarouselParent{
+                flex-direction: column;
+            
+                .popularCarouselComponent{
+                    max-width: 100%;
+                    gap: 10px;
+    
+                        .mainPopularCarouselImageParent{
+                            height: 150px;
+    
+                            .mainPopularCarouselImage{
+                                max-height: 150px;
+                            }
+                        }
+            
+                    .carouselComponentDetails{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+            
+            
+                        .DetailsBottom{
+            
+                            .DetailsBottomRight{
+                                gap: 20px;
+                            }
+                        }
+            
+                    }
+                }
+            }
+        }
+    
+        .imageModalOverlay {
+    
+            .closeButton {
+                top: 95px;
+                right: 55px;
+              }
+          }
+          
+          .imageModal {
+            height: 80%;
+            flex-direction: column;
+
+            img{
+                max-height: 40%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 0px;
+
+            }
+    
+            .carouselComponentDetails{
+    
+                .DetailsBottom{
+    
+                    .DetailsBottomRight{
+                        gap: 20px;
+                    }
+                }
+            }
+          }
+        
+          .prevButton {
+            left: 10px;
+            width: auto;
+            height: auto;
+            
+          }
+        
+          .nextButton {
+            right: 10px; 
+            width: auto;
+            height: auto; 
+          }
+    }
+}

@@ -278,3 +278,264 @@
       right: 40px;
     }
   }
+
+@media screen and (max-width: $big_laptop) {
+  .allArticles {
+  
+    .allArticlesListing {
+  
+      .allArticlesSingle {
+          display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+            box-shadow: 0px 5px 20px $box_shadow_black;;
+            border-radius: 20px;
+            padding: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s;
+        }
+  
+        .mainPopularImageParent {
+          max-height: 200px;
+  
+          .mainPopularImage {
+            max-height: 200px;
+          }
+        }
+  
+        .singleArticleDetails {
+  
+          .singleArticleBottom {
+            margin-right: 20px;
+
+          }
+        }
+      }
+    }
+  
+    .imageModalOverlay {
+  
+      .closeButton {
+        top: 200px;
+        right: 90px;
+      }
+    }
+  
+  
+    .prevButton,
+    .nextButton {
+      top: 50%;    
+    }
+  
+    .prevButton {
+      left: 15px;
+    }
+  
+    .nextButton {
+      right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .allArticles {
+  
+    .allArticlesListing {
+  
+      .allArticlesSingle {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          width: 100%;
+          box-shadow: 0px 5px 20px $box_shadow_black;;
+          border-radius: 20px;
+          padding: 20px;
+          transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+          }
+  
+          .mainPopularImageParent {
+            max-height: 170px;
+  
+            .mainPopularImage {
+              max-height: 170px;
+            }
+          } 
+  
+          .singleArticleDetails {
+  
+            .singleArticleBottom {
+              margin-right: 20px;
+
+            }
+          }
+        }
+      }
+  
+      .imageModalOverlay {
+        
+
+        .imageModal{
+          height: 30%;
+        }
+  
+        .closeButton {
+          top: 300px;
+          right: 60px;
+        }
+      }
+  
+      .prevButton,
+      .nextButton {
+        width: auto;
+        height: auto;
+        top: 50%;    
+      }
+  
+    .prevButton {
+      left: 15px;
+    }
+  
+    .nextButton {
+      right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .allArticles {
+  
+    .allArticlesListing {
+  
+      .allArticlesSingle {
+  
+          .mainPopularImageParent {
+            max-height: 170px;
+  
+            .mainPopularImage {
+              max-height: 170px;
+            }
+          } 
+  
+          .singleArticleDetails {
+  
+            .singleArticleBottom {
+              margin-right: 20px;
+
+            }
+          }
+        }
+      }
+  
+      .imageModalOverlay {
+        width: 100%;
+
+        .imageModal{
+          width: 80%;
+          flex-direction: column;
+          height: 80%;
+
+          img{
+            width: auto;
+            height: 50%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+          }
+        }
+  
+        .closeButton {
+          top: 90px;
+          right: 90px;
+        }
+      }
+  
+      .prevButton,
+      .nextButton {
+        width: auto;
+        height: auto;
+        top: 50%;    
+      }
+  
+    .prevButton {
+      left: 15px;
+    }
+  
+    .nextButton {
+      right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: $iphone_14_pro_max) {
+  .allArticles {
+  
+    .allArticlesListing {
+  
+      .allArticlesSingle {
+        flex-direction: column;
+  
+          .mainPopularImageParent {
+            max-height: 170px;
+  
+            .mainPopularImage {
+              max-height: 170px;
+            }
+          } 
+  
+          .singleArticleDetails {
+  
+            .singleArticleBottom {
+              margin-right: 20px;
+
+            }
+          }
+        }
+      }
+  
+      .imageModalOverlay {
+        width: 100%;
+
+        .imageModal{
+          width: 80%;
+          flex-direction: column;
+          height: 80%;
+
+          img{
+            width: auto;
+            height: 50%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 0px;
+          }
+        }
+  
+        .closeButton {
+          top: 110px;
+          right: 60px;
+        }
+      }
+  
+      .prevButton,
+      .nextButton {
+        width: auto;
+        height: auto;
+        top: 50%;    
+      }
+  
+    .prevButton {
+      left: 15px;
+    }
+  
+    .nextButton {
+      right: 15px;
+    }
+  }
+}

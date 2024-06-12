@@ -118,4 +118,53 @@
       }
     }
   }
+
+@media screen and (max-width: $big_laptop) {
+  .navbar{
+    height: 80px;
+  }
   
+  .wishlistPopup {
+  
+    .wishlistItem {
+  
+      img {
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  
+  .wishlistPopup {
+
+    .wishlistGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .wishlistItem {
+  
+      img {
+        height: 130px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  
+  .wishlistPopup {
+
+    .wishlistGrid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .wishlistItem {
+  
+      img {
+        height: 150px;
+      }
+    }
+  }
+}
